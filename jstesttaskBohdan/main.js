@@ -76,7 +76,7 @@ Rect.prototype.move = function() {
 	if(this._currentPosY >= this._windowHeight) {
 		this._currentPosX = getRandom(0, this._windowWidth - this._width, this._width);
 	    this._currentPosY = 0;
-	    this._speedX = getRandomInt(2, 9);
+	    this._speedX = getRandomInt(3, 9);
 	}
 }
 
@@ -95,7 +95,7 @@ function animate() {
 
   	if(collectionOfFigures.length == 0){
   		for(var i = 0; i < numberOfFigures; i++){
-			collectionOfFigures[i] = new Rect(getRandomInt(2, 9), getRandom(0, canvas.clientWidth-sideOfSquare, sideOfSquare), 
+			collectionOfFigures[i] = new Rect(getRandomInt(3, 9), getRandom(0, canvas.clientWidth-sideOfSquare, sideOfSquare), 
 				0, sideOfSquare, sideOfSquare, getRandomColorRGB(), canvas.clientWidth - sideOfSquare, canvas.clientHeight);
 		}
   	}
@@ -135,7 +135,7 @@ function animate() {
 
 	 	}
 	 	if(xCoordinate && yCoordinate && xfigure == yfigure){
-			collectionOfFigures[xfigure] = new Rect(getRandomInt(2, 10), getRandom(0, canvas.clientWidth-sideOfSquare, 
+			collectionOfFigures[xfigure] = new Rect(getRandomInt(3, 9), getRandom(0, canvas.clientWidth-sideOfSquare, 
 				sideOfSquare), 0, sideOfSquare, sideOfSquare, getRandomColorRGB(), canvas.clientWidth - sideOfSquare, canvas.clientHeight);
 			collectionOfFigures[xfigure].matrix();
 	  		collectionOfFigures[xfigure].move();
