@@ -1,0 +1,56 @@
+<doctype html>
+<html>
+  <head>
+    <title> Qualium Systems Javascript test task </title>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      canvas {        
+        background: yellow;
+      }
+      button{
+        width: 70px;
+        height: 30px;
+      }
+      button:hover {
+        color: white;
+      }
+      .control{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      #start{
+        background: lightgreen;
+        border: lightgreen;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      #stop{
+        background: red;
+        border: red;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      #scoreElem{
+        margin-left: 10px;
+      }
+      #score {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="control">
+      <button id="start" onclick="start();"> Start </button>
+      <button id="stop" onclick="stop();"> Stop </button>
+      <span id="scoreElem"> Score: <span id="score"> 0 </span> </span>
+    </div>
+    <canvas width="640" height="480" id="canvas"></canvas>      
+  </body>
+</html>
